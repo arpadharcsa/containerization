@@ -6,6 +6,8 @@ COPY ./src ./src
 RUN mvn clean package
 
 FROM eclipse-temurin:17-jre-jammy
+RUN addgroup apprunner; adduser  --ingroup apprunner --disabled-password agent
+USER agent
 WORKDIR /app
 EXPOSE 8080
 COPY --from=builder /app/target/*.jar /app/*.jar
