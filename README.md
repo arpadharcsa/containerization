@@ -13,7 +13,8 @@
 
 ## Build results
 
-| Description                                                  | Version | Size  |
-|--------------------------------------------------------------|---------|-------|
-| Basic Docker image has been created without any optimisation | 1.0.0   | 486MB |
-| Change base image to eclipse-temurin with jdk                | 1.1.0   | 471MB  |
+| Description                                                                                                                                   | Version | Size  |
+|-----------------------------------------------------------------------------------------------------------------------------------------------|---------|-------|
+| Basic Docker image has been created without any optimisation                                                                                  | 1.0.0   | 486MB |
+| Change base image to eclipse-temurin with jdk                                                                                                 | 1.1.0   | 471MB |
+| Introduce multi-stage build in order to separate the compile time and runtime dependencies. Now we are able to set JRE-based base image | 1.2.0   | 285MB |
